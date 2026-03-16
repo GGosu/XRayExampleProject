@@ -10,7 +10,6 @@ public class XRayExampleProjectEditorTarget : TargetRules
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		bOverrideBuildEnvironment = true;
-		CppStandard = CppStandardVersion.Cpp20;
 
 		ExtraModuleNames.AddRange( new string[] { "XRayExampleProject" } );
 	}
