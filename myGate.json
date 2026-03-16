@@ -1,0 +1,20 @@
+{
+	"gate_name": "myGate",
+	"conditions": [
+		{
+			"metric": "error_count",
+			"operator": "==",
+			"threshold": 0
+		},
+		{
+			"metric": "score_average",
+			"operator": ">=",
+			"threshold": 85
+		},
+		{
+			"metric": "score_minimal",
+			"operator": ">=",
+			"threshold": 70
+		}
+	]
+}

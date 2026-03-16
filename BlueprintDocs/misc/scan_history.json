@@ -1,0 +1,45 @@
+[
+	{
+		"date": "2026-03-15T21:03:51",
+		"average_score": 80,
+		"issues": 63,
+		"bps":
+		{
+			"BP_Test_01": 80,
+			"BPI_TestInterface": 98,
+			"test_02": 48,
+			"BP_Test_06": 98,
+			"BP_Test_05": 71,
+			"BP_Test_04": 80,
+			"BP_Test_03": 83
+		},
+		"issueTypes":
+		{
+			"Dead Code": 4,
+			"Disabled Nodes": 1,
+			"Naming": 22,
+			"Event Naming": 3,
+			"Empty Tick": 3,
+			"Unused Function": 3,
+			"Performance": 1,
+			"Unhandled Cast": 2,
+			"Read-only Variable": 1,
+			"Broken Node": 1,
+			"Loop on Tick": 1,
+			"Cast on Tick": 1,
+			"Set Timer on Tick": 1,
+			"Create Widget on Tick": 1,
+			"Print String on Tick": 2,
+			"Branch Literal": 1,
+			"Unused Dispatcher": 1,
+			"Dispatcher Not Bound": 1,
+			"Large Graph": 1,
+			"Memory Risk": 1,
+			"Write-only Variable": 4,
+			"Dispatcher never unbound": 2,
+			"Cyclomatic Complexity": 1,
+			"Unused Variable": 2,
+			"Bool Naming": 2
+		}
+	}
+]

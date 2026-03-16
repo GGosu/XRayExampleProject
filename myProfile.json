@@ -1,0 +1,169 @@
+{
+	"profile_name": "myProfile",
+	"rules":
+	{
+		"BP-DEAD-001":
+		{
+			"status": "active"
+		},
+		"BP-PERF-001":
+		{
+			"status": "active"
+		},
+		"BP-ERR-001":
+		{
+			"status": "active"
+		},
+		"BP-COMPLEX-001":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"max_complexity": 10
+			}
+		},
+		"BP-MEM-001":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"max_references": 5
+			}
+		},
+		"BP-UNUSED-FN-001":
+		{
+			"status": "active"
+		},
+		"BP-UNUSED-VAR-001":
+		{
+			"status": "active"
+		},
+		"BP-CAST-001":
+		{
+			"status": "active"
+		},
+		"BP-VAR-002":
+		{
+			"status": "active"
+		},
+		"BP-VAR-003":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"score_penalty": 0,
+				"severity": "info"
+			}
+		},
+		"BP-SIZE-001":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"max_nodes": 50
+			}
+		},
+		"BP-STYLE-001":
+		{
+			"status": "active"
+		},
+		"BP-NAMING-001":
+		{
+			"status": "active"
+		},
+		"BP-NAMING-002":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"allow_spaces": 1,
+				"convention": "PascalCase"
+			}
+		},
+		"BP-NAMING-003":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"allow_spaces": 1,
+				"convention": "PascalCase"
+			}
+		},
+		"BP-NAMING-004":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"allow_spaces": 1
+			}
+		},
+		"BP-NAMING-009":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"allow_spaces": 1
+			}
+		},
+		"BP-PERF-002":
+		{
+			"status": "active"
+		},
+		"BP-PERF-003":
+		{
+			"status": "active"
+		},
+		"BP-PERF-004":
+		{
+			"status": "active"
+		},
+		"BP-PERF-005":
+		{
+			"status": "active"
+		},
+		"BP-PERF-006":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"severity": "info",
+				"score_penalty": 0
+			}
+		},
+		"BP-PERF-008":
+		{
+			"status": "active"
+		},
+		"BP-DISP-001":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"severity": "info",
+				"score_penalty": 0
+			}
+		},
+		"BP-DISP-002":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"severity": "info",
+				"score_penalty": 0
+			}
+		},
+		"BP-DISP-003":
+		{
+			"status": "active",
+			"parameters":
+			{
+				"severity": "info",
+				"score_penalty": 0
+			}
+		},
+		"BP-FLOW-001":
+		{
+			"status": "active"
+		}
+	}
+}

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blueprint X-Ray // 1.0.0 | XRayExampleProject</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    window.__PROJECT_NAME__ = "XRayExampleProject";
+    window.__MANIFEST__ = [
+	{
+		"name": "BP_Test_01",
+		"path": "/Game/BP/BP_Test_01",
+		"errors": 1,
+		"warnings": 7,
+		"infos": 0,
+		"average_score": 80,
+		"fanIn": 2,
+		"fanOut": 0,
+		"maxDepth": 3,
+		"totalPaths": 11,
+		"issueList": [
+			{
+				"type": "Dead Code",
+				"level": "error",
+				"desc": "'EventGraph': 2 unreachable — SomeDisabledEvent, Print String",
+				"rule_id": "BP-DEAD-001"
+			},
+			{
+				"type": "Disabled Nodes",
+				"level": "warning",
+				"desc": "Found 1 disabled event nodes: SomeDisabledEvent",
+				"rule_id": "BP-STYLE-001"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Function 'someUnusedMethod' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-002"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Function 'unusedEvent' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-002"
+			},
+			{
+				"type": "Event Naming",
+				"level": "warning",
+				"desc": "Event 'unusedEvent' does not start with an uppercase letter.",
+				"rule_id": "BP-NAMING-009"
+			},
+			{
+				"type": "Empty Tick",
+				"level": "warning",
+				"desc": "Event Tick in 'EventGraph' has no connected logic but still runs every frame.",
+				"rule_id": "BP-PERF-008"
+			},
+			{
+				"type": "Unused Function",
+				"level": "warning",
+				"desc": "Function 'someUnusedMethod' is never called.",
+				"rule_id": "BP-UNUSED-FN-001"
+			},
+			{
+				"type": "Unused Function",
+				"level": "warning",
+				"desc": "Function 'unusedEvent' is never called.",
+				"rule_id": "BP-UNUSED-FN-001"
+			}
+		]
+	},
+	{
+		"name": "BPI_TestInterface",
+		"path": "/Game/BP/BPI_TestInterface",
+		"errors": 0,
+		"warnings": 2,
+		"infos": 0,
+		"average_score": 98,
+		"fanIn": 1,
+		"fanOut": 0,
+		"maxDepth": 1,
+		"totalPaths": 1,
+		"issueList": [
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Asset 'BPI_TestInterface' should start with 'BI_'.",
+				"rule_id": "BP-NAMING-001"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Function 'isOk' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-002"
+			}
+		]
+	},
+	{
+		"name": "test_02",
+		"path": "/Game/BP/ExampleFolder2/test_02",
+		"errors": 6,
+		"warnings": 11,
+		"infos": 4,
+		"average_score": 48,
+		"fanIn": 1,
+		"fanOut": 1,
+		"maxDepth": 6,
+		"totalPaths": 17,
+		"issueList": [
+			{
+				"type": "Performance",
+				"level": "error",
+				"desc": "Heavy op(s) on Tick path in 'EventGraph': Get All Actors Of Class",
+				"rule_id": "BP-PERF-001"
+			},
+			{
+				"type": "Unhandled Cast",
+				"level": "warning",
+				"desc": "Cast in 'EventGraph' has no CastFailed handler.",
+				"rule_id": "BP-CAST-001"
+			},
+			{
+				"type": "Read-only Variable",
+				"level": "info",
+				"desc": "Variable 'SomeReadOnlyVariable' is read but never assigned. Always returns its default value.",
+				"rule_id": "BP-VAR-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Asset 'test_02' should start with 'BP_'.",
+				"rule_id": "BP-NAMING-001"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Function 'myCustomPrint' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-002"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Function 'someOnFireDispatcher_Event' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-002"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'someUnusedDispatcher' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'someUsedDispatcher' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'somePartlyUsedDispatcher' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'someOnFireDispatcher' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Event Naming",
+				"level": "warning",
+				"desc": "Event 'someOnFireDispatcher_Event' does not start with an uppercase letter.",
+				"rule_id": "BP-NAMING-009"
+			},
+			{
+				"type": "Broken Node",
+				"level": "error",
+				"desc": "'EventGraph' / 'Cast To BP_Test_01': 'Item' is already a 'BP Test 01', you don't need  Cast To BP_Test_01 .",
+				"rule_id": "BP-ERR-001"
+			},
+			{
+				"type": "Loop on Tick",
+				"level": "error",
+				"desc": "Loop node(s) on Tick path in 'EventGraph': For Loop",
+				"rule_id": "BP-PERF-002"
+			},
+			{
+				"type": "Cast on Tick",
+				"level": "warning",
+				"desc": "Dynamic cast(s) on Tick path in 'EventGraph': Cast To BP_Test_01",
+				"rule_id": "BP-PERF-003"
+			},
+			{
+				"type": "Set Timer on Tick",
+				"level": "error",
+				"desc": "Set Timer called on Tick path in 'EventGraph' — creates a new timer every frame: Set Timer by Function Name",
+				"rule_id": "BP-PERF-004"
+			},
+			{
+				"type": "Create Widget on Tick",
+				"level": "error",
+				"desc": "Create Widget called on Tick path in 'EventGraph' — allocates a new widget every frame: Create Widget",
+				"rule_id": "BP-PERF-005"
+			},
+			{
+				"type": "Print String on Tick",
+				"level": "info",
+				"desc": "Print String on Tick path in 'EventGraph' — debug output every frame: Print String",
+				"rule_id": "BP-PERF-006"
+			},
+			{
+				"type": "Branch Literal",
+				"level": "error",
+				"desc": "Branch in 'EventGraph' has hardcoded 'true' condition — one path is never taken.",
+				"rule_id": "BP-FLOW-001"
+			},
+			{
+				"type": "Unused Function",
+				"level": "warning",
+				"desc": "Function 'someOnFireDispatcher_Event' is never called.",
+				"rule_id": "BP-UNUSED-FN-001"
+			},
+			{
+				"type": "Unused Dispatcher",
+				"level": "info",
+				"desc": "Dispatcher 'someUnusedDispatcher' is declared but never called or bound anywhere in the project.",
+				"rule_id": "BP-DISP-003"
+			},
+			{
+				"type": "Dispatcher Not Bound",
+				"level": "info",
+				"desc": "Dispatcher 'somePartlyUsedDispatcher' is called but has no bindings anywhere in the project — call may go nowhere.",
+				"rule_id": "BP-DISP-001"
+			}
+		]
+	},
+	{
+		"name": "BP_Test_06",
+		"path": "/Game/BP/ExampleFolder2/BP_Test_06",
+		"errors": 0,
+		"warnings": 1,
+		"infos": 0,
+		"average_score": 98,
+		"fanIn": 0,
+		"fanOut": 0,
+		"maxDepth": 36,
+		"totalPaths": 36,
+		"issueList": [
+			{
+				"type": "Large Graph",
+				"level": "warning",
+				"desc": "Graph 'EventGraph' has 61 nodes. Consider refactoring into functions.",
+				"rule_id": "BP-SIZE-001"
+			}
+		]
+	},
+	{
+		"name": "BP_Test_05",
+		"path": "/Game/BP/ExampleFolder1/BP_Test_05",
+		"errors": 1,
+		"warnings": 14,
+		"infos": 2,
+		"average_score": 71,
+		"fanIn": 0,
+		"fanOut": 7,
+		"maxDepth": 16,
+		"totalPaths": 19,
+		"issueList": [
+			{
+				"type": "Dead Code",
+				"level": "error",
+				"desc": "'EventGraph': 6 unreachable — Set pawnRef, Set gameModeRef, Set test03Ref, Get Player Pawn, Get Game Mode, Get (a copy)",
+				"rule_id": "BP-DEAD-001"
+			},
+			{
+				"type": "Memory Risk",
+				"level": "warning",
+				"desc": "Hard references to 7 object types increase memory footprint and load times.",
+				"rule_id": "BP-MEM-001"
+			},
+			{
+				"type": "Unhandled Cast",
+				"level": "warning",
+				"desc": "Cast in 'EventGraph' has no CastFailed handler.",
+				"rule_id": "BP-CAST-001"
+			},
+			{
+				"type": "Write-only Variable",
+				"level": "warning",
+				"desc": "Variable 'pawnRef' is set but never read. The value is discarded.",
+				"rule_id": "BP-VAR-002"
+			},
+			{
+				"type": "Write-only Variable",
+				"level": "warning",
+				"desc": "Variable 'gameModeRef' is set but never read. The value is discarded.",
+				"rule_id": "BP-VAR-002"
+			},
+			{
+				"type": "Write-only Variable",
+				"level": "warning",
+				"desc": "Variable 'test03Ref' is set but never read. The value is discarded.",
+				"rule_id": "BP-VAR-002"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Function 'someUsedDispatcher_Event_0' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-002"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'gameInstanceRef' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'pawnRef' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'gameModeRef' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'test01Ref' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'test02Ref' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'test03Ref' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Event Naming",
+				"level": "warning",
+				"desc": "Event 'someUsedDispatcher_Event_0' does not start with an uppercase letter.",
+				"rule_id": "BP-NAMING-009"
+			},
+			{
+				"type": "Empty Tick",
+				"level": "warning",
+				"desc": "Event Tick in 'EventGraph' has no connected logic but still runs every frame.",
+				"rule_id": "BP-PERF-008"
+			},
+			{
+				"type": "Dispatcher never unbound",
+				"level": "info",
+				"desc": "Dispatcher 'Application Received Screen Orientation Changed Notification Delegate' is bound from this Blueprint but never unbound — possible delegate leak.",
+				"rule_id": "BP-DISP-002"
+			},
+			{
+				"type": "Dispatcher never unbound",
+				"level": "info",
+				"desc": "Dispatcher 'Some Used Dispatcher' is bound from this Blueprint but never unbound — possible delegate leak.",
+				"rule_id": "BP-DISP-002"
+			}
+		]
+	},
+	{
+		"name": "BP_Test_04",
+		"path": "/Game/BP/ExampleFolder1/BP_Test_04",
+		"errors": 1,
+		"warnings": 5,
+		"infos": 0,
+		"average_score": 80,
+		"fanIn": 0,
+		"fanOut": 0,
+		"maxDepth": 13,
+		"totalPaths": 25,
+		"issueList": [
+			{
+				"type": "Dead Code",
+				"level": "error",
+				"desc": "'EventGraph': 4 unreachable — Get All Actors Of Class, Set Tags, Get (a copy), Make Array",
+				"rule_id": "BP-DEAD-001"
+			},
+			{
+				"type": "Cyclomatic Complexity",
+				"level": "warning",
+				"desc": "Function 'ReceiveBeginPlay' has complexity 13. Consider splitting.",
+				"rule_id": "BP-COMPLEX-001"
+			},
+			{
+				"type": "Unused Variable",
+				"level": "warning",
+				"desc": "Variable 'someBadBool' is never read or written.",
+				"rule_id": "BP-UNUSED-VAR-001"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Variable 'someBadBool' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Bool Naming",
+				"level": "warning",
+				"desc": "Boolean variable 'someBadBool' missing 'b', 'Is', or 'Has' prefix.",
+				"rule_id": "BP-NAMING-004"
+			},
+			{
+				"type": "Empty Tick",
+				"level": "warning",
+				"desc": "Event Tick in 'EventGraph' has no connected logic but still runs every frame.",
+				"rule_id": "BP-PERF-008"
+			}
+		]
+	},
+	{
+		"name": "BP_Test_03",
+		"path": "/Game/BP/ExampleFolder1/BP_Test_03",
+		"errors": 1,
+		"warnings": 6,
+		"infos": 1,
+		"average_score": 83,
+		"fanIn": 1,
+		"fanOut": 0,
+		"maxDepth": 2,
+		"totalPaths": 5,
+		"issueList": [
+			{
+				"type": "Dead Code",
+				"level": "error",
+				"desc": "'someDeadCodeFunction': 3 unreachable — Set someLocalVariable, Select Int, integer >= integer",
+				"rule_id": "BP-DEAD-001"
+			},
+			{
+				"type": "Unused Variable",
+				"level": "warning",
+				"desc": "Local variable 'someBadLocalBool' in 'someDeadCodeFunction' is never used.",
+				"rule_id": "BP-UNUSED-VAR-001"
+			},
+			{
+				"type": "Write-only Variable",
+				"level": "warning",
+				"desc": "Local variable 'someLocalVariable' in 'someDeadCodeFunction' is set but never read. The value is discarded.",
+				"rule_id": "BP-VAR-002"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Function 'someDeadCodeFunction' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-002"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Local variable 'someBadLocalBool' in 'someDeadCodeFunction' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Naming",
+				"level": "warning",
+				"desc": "Local variable 'someLocalVariable' in 'someDeadCodeFunction' does not follow PascalCase convention.",
+				"rule_id": "BP-NAMING-003"
+			},
+			{
+				"type": "Bool Naming",
+				"level": "warning",
+				"desc": "Local boolean variable 'someBadLocalBool' in 'someDeadCodeFunction' missing 'b', 'Is', or 'Has' prefix.",
+				"rule_id": "BP-NAMING-004"
+			},
+			{
+				"type": "Print String on Tick",
+				"level": "info",
+				"desc": "Print String on Tick path in 'EventGraph' — debug output every frame: Print String",
+				"rule_id": "BP-PERF-006"
+			}
+		]
+	}
+];
+    window.__DEP_MAP__ = "graph LR\n  n_test_02[\"test_02\"] --> n_BP_Test_01[\"BP_Test_01\"]\n  n_BP_Test_05[\"BP_Test_05\"] --> n_BP_Test_01[\"BP_Test_01\"]\n  n_BP_Test_05[\"BP_Test_05\"] --> n_BPI_TestInterface[\"BPI_TestInterface\"]\n  n_BP_Test_05[\"BP_Test_05\"] --> n_BP_Test_01[\"BP_Test_01\"]\n  n_BP_Test_05[\"BP_Test_05\"] --> n_test_02[\"test_02\"]\n  n_BP_Test_05[\"BP_Test_05\"] --> n_BP_Test_03[\"BP_Test_03\"]\n  n_BP_Test_06[\"BP_Test_06\"] -.->|impl| n_BPI_TestInterface([\"BPI_TestInterface\"])\n  style n_BPI_TestInterface fill:#1e1b4b,stroke:#6366f1,stroke-width:1px,color:#a5b4fc\n";
+    window.__SCAN_HISTORY__ = [
+	{
+		"date": "2026-03-15T21:03:51",
+		"average_score": 80,
+		"issues": 63,
+		"bps":
+		{
+			"BP_Test_01": 80,
+			"BPI_TestInterface": 98,
+			"test_02": 48,
+			"BP_Test_06": 98,
+			"BP_Test_05": 71,
+			"BP_Test_04": 80,
+			"BP_Test_03": 83
+		},
+		"issueTypes":
+		{
+			"Dead Code": 4,
+			"Disabled Nodes": 1,
+			"Naming": 22,
+			"Event Naming": 3,
+			"Empty Tick": 3,
+			"Unused Function": 3,
+			"Performance": 1,
+			"Unhandled Cast": 2,
+			"Read-only Variable": 1,
+			"Broken Node": 1,
+			"Loop on Tick": 1,
+			"Cast on Tick": 1,
+			"Set Timer on Tick": 1,
+			"Create Widget on Tick": 1,
+			"Print String on Tick": 2,
+			"Branch Literal": 1,
+			"Unused Dispatcher": 1,
+			"Dispatcher Not Bound": 1,
+			"Large Graph": 1,
+			"Memory Risk": 1,
+			"Write-only Variable": 4,
+			"Dispatcher never unbound": 2,
+			"Cyclomatic Complexity": 1,
+			"Unused Variable": 2,
+			"Bool Naming": 2
+		}
+	}
+];
+    window.__BP_DATA__ = {};
+    window.__PROFILE_INFO__ = {
+	"name": "default",
+	"rules": [
+		{
+			"id": "BP-DEAD-001",
+			"label": "Dead Code",
+			"enabled": true,
+			"severity": "error"
+		},
+		{
+			"id": "BP-PERF-001",
+			"label": "Heavy Tick",
+			"enabled": true,
+			"severity": "error"
+		},
+		{
+			"id": "BP-ERR-001",
+			"label": "Broken Node",
+			"enabled": true,
+			"severity": "error"
+		},
+		{
+			"id": "BP-MEM-001",
+			"label": "Memory Risk",
+			"enabled": true,
+			"severity": "warning",
+			"params":
+			{
+				"max_references": 5
+			}
+		},
+		{
+			"id": "BP-COMPLEX-001",
+			"label": "Cyclomatic Complexity",
+			"enabled": true,
+			"severity": "warning",
+			"params":
+			{
+				"max_complexity": 10
+			}
+		},
+		{
+			"id": "BP-CAST-001",
+			"label": "Unhandled Cast",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-SIZE-001",
+			"label": "Large Graph",
+			"enabled": true,
+			"severity": "warning",
+			"params":
+			{
+				"max_nodes": 50
+			}
+		},
+		{
+			"id": "BP-STYLE-001",
+			"label": "Disabled Nodes",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-UNUSED-VAR-001",
+			"label": "Unused Variable",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-UNUSED-FN-001",
+			"label": "Unused Function",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-VAR-002",
+			"label": "Write-only Variable",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-VAR-003",
+			"label": "Read-only Variable",
+			"enabled": true,
+			"severity": "info"
+		},
+		{
+			"id": "BP-NAMING-001",
+			"label": "Asset Naming",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-NAMING-002",
+			"label": "Function Naming",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-NAMING-003",
+			"label": "Variable Naming",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-NAMING-004",
+			"label": "Bool Naming",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-NAMING-009",
+			"label": "Event Naming",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-PERF-002",
+			"label": "Loop on Tick",
+			"enabled": true,
+			"severity": "error"
+		},
+		{
+			"id": "BP-PERF-003",
+			"label": "Cast on Tick",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-PERF-004",
+			"label": "Set Timer on Tick",
+			"enabled": true,
+			"severity": "error"
+		},
+		{
+			"id": "BP-PERF-005",
+			"label": "Create Widget on Tick",
+			"enabled": true,
+			"severity": "error"
+		},
+		{
+			"id": "BP-PERF-006",
+			"label": "Print String on Tick",
+			"enabled": true,
+			"severity": "info"
+		},
+		{
+			"id": "BP-PERF-008",
+			"label": "Empty Tick",
+			"enabled": true,
+			"severity": "warning"
+		},
+		{
+			"id": "BP-DISP-001",
+			"label": "Dispatcher Not Bound",
+			"enabled": true,
+			"severity": "info"
+		},
+		{
+			"id": "BP-DISP-002",
+			"label": "Dispatcher never unbound",
+			"enabled": true,
+			"severity": "info"
+		},
+		{
+			"id": "BP-DISP-003",
+			"label": "Unused Dispatcher",
+			"enabled": true,
+			"severity": "info"
+		},
+		{
+			"id": "BP-FLOW-001",
+			"label": "Branch Literal",
+			"enabled": true,
+			"severity": "error"
+		}
+	],
+	"exclusions": []
+};
+    window.__PROJECT_ASSET_NAMING__ = [];
+    window.__GATE_RESULT__ = null; // overridden by gate_result.js when a gate was evaluated
+  </script>
+  <script src="js/gate_result.js"></script>
+  <script src="https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js"></script>
+<!--  © 2026 Yaroslav Temper. All rights reserved.-->
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <span class="logo" onclick="goHome()" style="cursor:pointer;">Blueprint X-Ray // 1.0.0</span>
+      <input type="text" id="search" class="search-input" placeholder="Search Assets...">
+      <div class="view-toggle">
+        <button onclick="setViewMode('flat')" id="btn-flat" class="view-btn active">Listing</button>
+        <button onclick="setViewMode('tree')" id="btn-tree" class="view-btn">Folders</button>
+        <button onclick="cycleSidebarSort()" id="btn-sort" class="view-btn" title="Sort order">A–Z</button>
+      </div>
+      <div id="filter-pills" style="display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;"></div>
+    </div>
+    <div id="bp-list"></div>
+    <div style="padding:12px 16px;font-size:0.6rem;color:var(--text-disabled);text-align:center;border-top:1px solid var(--border);margin-top:auto;">
+      &copy; 2026 Yaroslav Temper
+    </div>
+  </div>
+  <div class="main-content" id="content"></div>
+  <div id="modal-overlay">
+    <div class="modal-close" onclick="closeModal()">&times;</div>
+    <div id="modal-content"></div>
+    <div class="modal-controls">
+      <button class="btn-action" onclick="zoomModal(0.8)">-</button>
+      <button class="btn-action" onclick="resetModal()">RESET</button>
+      <button class="btn-action" onclick="zoomModal(1.2)">+</button>
+    </div>
+  </div>
+  <script src="js/state.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/palette.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/bp.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

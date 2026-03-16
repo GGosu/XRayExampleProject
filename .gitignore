@@ -1,0 +1,17 @@
+# Unreal Engine
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Generated solution/project files (regenerate via right-click on .uproject)
+*.sln
+
+# IDE
+.vs/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
