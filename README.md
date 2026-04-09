@@ -1,6 +1,6 @@
 # Blueprint X-Ray — Example Project
 
-This is an example Unreal Engine 5 project for the **Blueprint X-Ray** plugin.
+This is an example Unreal Engine 5 project for the [Blueprint X-Ray](https://www.fab.com/listings/6a3f0736-8961-478a-ab47-29ded10d439b) plugin.
 
 It contains intentionally flawed Blueprints so you can see exactly what the plugin detects, a pre-generated sample report you can open right now, and ready-to-use headless scan scripts for CI/CD integration.
 
